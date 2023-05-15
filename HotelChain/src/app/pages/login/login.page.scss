@@ -1,0 +1,31 @@
+ion-col.colColor {
+    background-color: #FAC5A8;
+    color: #fff;
+    text-align: center;
+    border: #000000;
+    border-style: outset;
+  }
+
+/*ion-grid {
+    --ion-grid-columns: 3;
+}*/
+
+ion-input.custom {
+    --background: #FAC5A8;
+    --color: #000000;
+    --placeholder-color: #000000;
+    border: #000000;
+    border-style: outset;
+}
+
+ion-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.iconResize {
+    font-size: 30px;
+}
