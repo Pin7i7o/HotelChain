@@ -2,25 +2,44 @@
     padding-top: unset;
 }
 
-.img-color {
-    background-color: white;
-    border-radius: 100px;
-}
 
-.filters-card {
+ion-button.round-button {
+    --background: white;
+    --background-hover: #dbdbdb;
+    --background-activated: #bebebe;
+    --background-focused: #bebebe;
+
+    --color: black;
+
+    width: 56px;
+    height: 56px;
+  
+    --border-radius: 50%;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+   
+    --ripple-color: rgb(246, 182, 133);
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+ion-card.filters-background {
     border-radius: 25px;
     border-style: solid;
     border-color: black;
+    border-width: 1px;
     background-color: #DA763D;
     text-align: center;
 }
 
-.filters-text {
+ion-col.filters-text {
     color: white;
     text-align: center;
 }
 
-.floors-card {
+ion-card.floors-background {
     border-radius: 5px;
     border-style: solid;
     border-color: #F8A435;

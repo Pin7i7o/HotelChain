@@ -24,31 +24,22 @@
     Filtros
   </ion-title>
 
-  <ion-card class="filters-card">
+  <ion-card class="filters-background">
     <ion-row>
       <ion-col size="4">
-        <img 
-          src="/assets/icons/infraestrutura.png" 
-          alt="icone infraestrutura"
-          style="width: 50%;" 
-          class="img-color"
-        />
+            <ion-button class="round-button" (click)="toggleImage()">
+              <ion-icon slot="icon-only" name="business"></ion-icon>
+            </ion-button>
       </ion-col>
       <ion-col size="4">
-        <img 
-          src="/assets/icons/alert.png"
-          alt="icone alerta" 
-          style="width: 50%;" 
-          class="img-color"
-        />
+        <ion-button class="round-button">
+          <ion-icon slot="icon-only" name="radio"></ion-icon>
+        </ion-button>
       </ion-col>
       <ion-col size="4">
-        <img 
-          src="/assets/icons/equip.png"
-          alt="icone equipamento" 
-          style="width: 50%;" 
-          class="img-color"
-          />
+        <ion-button class="round-button">
+          <ion-icon slot="icon-only" name="construct"></ion-icon>
+        </ion-button>
       </ion-col>
     </ion-row>
     <ion-row >
@@ -64,26 +55,26 @@
     </ion-row>
   </ion-card>
 
-  <ion-row style="height: 40px;"></ion-row>
+  <ion-row style="height: 30px;"></ion-row>
 
     <ion-row>
       <ion-col size="1"></ion-col>
         <ion-col size="7">
-          <ion-card class="floors-card" style="height: 50px;">
+          <ion-card class="floors-background" style="height: 50px;">
             <ion-card-content>
               Indique o piso
             </ion-card-content>
           </ion-card>
         </ion-col>
         <ion-col size="3">
-          <ion-card class="floors-card" style="height: 50px;">
-            <ion-input placeholder="Piso"></ion-input>
+          <ion-card class="floors-background" style="height: 50px;">
+            <ion-input [(ngModel)]="floorNumber" placeholder="Piso"></ion-input>
           </ion-card>
         </ion-col>
       <ion-col size="1"></ion-col>
     </ion-row>
 
-    <ion-row style="height: 10px;"></ion-row>
+  <ion-row style="height: 10px;"></ion-row>
 
-  
+  <img *ngIf="selectedImage" src="selectedImage" alt="piso"/>
 </ion-content>
