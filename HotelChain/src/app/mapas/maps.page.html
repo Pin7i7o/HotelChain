@@ -3,14 +3,14 @@
     <ion-title>
       <ion-row class="ion-align-items-center">
           <ion-col size="2">
-              <img src="/assets/logoH.png" />
+              <img src="/assets/logoH.png" alt="logo"/>
           </ion-col>
           <ion-col size = "1"></ion-col>
           <ion-col size="8" class="title-col">
                Mapas
           </ion-col>
           <ion-col size="1">
-            <img src="/assets/icons/interrogação.png">
+            <img src="/assets/icons/interrogação.png" alt="manual intruções">
           </ion-col>
       </ion-row>
     </ion-title>
@@ -25,37 +25,40 @@
   </ion-title>
 
   <ion-card class="filters-card">
-    <ion-row >
+    <ion-row>
       <ion-col size="4">
         <img 
           src="/assets/icons/infraestrutura.png" 
+          alt="icone infraestrutura"
           style="width: 50%;" 
           class="img-color"
         />
       </ion-col>
       <ion-col size="4">
         <img 
-          src="/assets/icons/alert.png" 
+          src="/assets/icons/alert.png"
+          alt="icone alerta" 
           style="width: 50%;" 
           class="img-color"
         />
       </ion-col>
       <ion-col size="4">
         <img 
-          src="/assets/icons/equip.png" 
+          src="/assets/icons/equip.png"
+          alt="icone equipamento" 
           style="width: 50%;" 
           class="img-color"
           />
       </ion-col>
     </ion-row>
     <ion-row >
-      <ion-col size="4" class="white-text">
+      <ion-col size="4" class="filters-text">
         Infraestrutura
       </ion-col>
-      <ion-col size="4"  class="white-text">
+      <ion-col size="4"  class="filters-text">
         Sensores
       </ion-col>
-      <ion-col size="4"  class="white-text">
+      <ion-col size="4"  class="filters-text">
         Equipamentos
       </ion-col>
     </ion-row>
@@ -63,10 +66,24 @@
 
   <ion-row style="height: 40px;"></ion-row>
 
-  <ion-row>
-    <ion-col size="2">1</ion-col>
-    <ion-col size="6">2</ion-col>
-    <ion-col size="2">3</ion-col>
-    <ion-col size="2">4</ion-col>
-  </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+        <ion-col size="7">
+          <ion-card class="floors-card" style="height: 50px;">
+            <ion-card-content>
+              Indique o piso
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card class="floors-card" style="height: 50px;">
+            <ion-input placeholder="Piso"></ion-input>
+          </ion-card>
+        </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row style="height: 10px;"></ion-row>
+
+  
 </ion-content>

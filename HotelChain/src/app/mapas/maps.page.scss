@@ -2,10 +2,6 @@
     padding-top: unset;
 }
 
-ion-col {
-   text-align: center;
-}
-
 .img-color {
     background-color: white;
     border-radius: 100px;
@@ -13,11 +9,21 @@ ion-col {
 
 .filters-card {
     border-radius: 25px;
-    border-style: outset;
+    border-style: solid;
     border-color: black;
     background-color: #DA763D;
+    text-align: center;
 }
 
-.white-text{
+.filters-text {
     color: white;
+    text-align: center;
+}
+
+.floors-card {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #F8A435;
+    background-color: white;
+    text-align: center;
 }
