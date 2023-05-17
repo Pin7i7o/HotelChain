@@ -3,14 +3,14 @@
     <ion-title>
       <ion-row class="ion-align-items-center">
           <ion-col size="2">
-              <img src="/assets/logoH.png" alt="logo"/>
+              <ion-img src="/assets/logoH.png" alt="logo"></ion-img>
           </ion-col>
           <ion-col size = "1"></ion-col>
-          <ion-col size="8" class="title-col">
+          <ion-col size="7" class="title-col">
                Mapas
           </ion-col>
-          <ion-col size="1">
-            <img src="/assets/icons/interrogação.png" alt="manual intruções">
+          <ion-col size="2">
+            <ion-icon size="large" name="help-circle-outline"></ion-icon>
           </ion-col>
       </ion-row>
     </ion-title>
@@ -57,28 +57,28 @@
 
   <ion-row style="height: 30px;"></ion-row>
 
-    <ion-row>
-      <ion-col size="1"></ion-col>
-        <ion-col size="7">
-          <ion-card class="floors-background" style="height: 50px;">
-            <ion-card-content>
-              Indique o piso
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="3">
-          <ion-card class="floors-background" style="height: 50px;">
-            <ion-input 
-              [(ngModel)]="floorNumber" 
-              (ionInput)="updateFloor()" 
-              type="number" 
-              [clearOnEdit]="true"
-              placeholder="Piso">
-            </ion-input>
-          </ion-card>
-        </ion-col>
-      <ion-col size="1"></ion-col>
-    </ion-row>
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="7">
+      <ion-card class="floors-background" style="height: 50px;">
+        <ion-card-content>
+          Indique o piso
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="3">
+      <ion-card class="floors-background" style="height: 50px;">
+        <ion-input 
+          [(ngModel)]="floorNumber" 
+          (ionInput)="updateFloor()" 
+          type="number" 
+          [clearOnEdit]="true"
+          placeholder="Piso">
+        </ion-input>
+      </ion-card>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
 
   <ion-row style="height: 10px;"></ion-row>
 
