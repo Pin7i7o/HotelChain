@@ -7,39 +7,25 @@ import { Component } from '@angular/core';
 })
 export class MapsPage {
 
-  showImage: boolean = false;
   floorNumber: number = 0;
-  selectedImage: string = "";
+  floor: string = '/assets/icons/interrogação.png';
 
-  constructor() {}
+  constructor(){}
 
-  toggleImage(){
-    this.showImage = !this.showImage;
-  }
-
-  
-
-  updateSelectedImage() {
+  updateFloor() {
     switch (this.floorNumber) {
       case 1:
-        this.selectedImage = '/assets/john.png';
+        this.floor = '/assets/logo.png';
         break;
       case 2:
-        this.selectedImage = '/assets/logo.png';
+        this.floor = '/assets/logoH.png';
         break;
       case 0:
+        this.floor = '/assets/john.png';
         break;
       default:
-        this.selectedImage = '/assets/planoPiso.png';
+        this.floor = '/assets/icons/interrogação.png';
         break;
     }
-  }
-
-  ionViewDidEnter() {
-    this.updateSelectedImage();
-  }
-
-  ionViewWillLeave() {
-    this.selectedImage = '/assets/planoPiso.png';
   }
 }

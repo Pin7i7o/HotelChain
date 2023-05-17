@@ -34,15 +34,15 @@ ion-card.filters-background {
     text-align: center;
 }
 
-ion-col.filters-text {
-    color: white;
-    text-align: center;
-}
-
 ion-card.floors-background {
     border-radius: 5px;
     border-style: solid;
     border-color: #F8A435;
     background-color: white;
+    text-align: center;
+}
+
+ion-col.filters-text {
+    color: white;
     text-align: center;
 }
