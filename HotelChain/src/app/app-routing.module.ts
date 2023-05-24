@@ -9,7 +9,19 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },  {
+    path: 'login',
+    loadChildren: () => import('./login/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'criar-conta',
+    loadChildren: () => import('./criar_conta/criar-conta/criar-conta.module').then( m => m.CriarContaPageModule)
+  },
+  {
+    path: 'criar-conta-info',
+    loadChildren: () => import('./criar_conta_info/criar-conta-info/criar-conta-info.module').then( m => m.CriarContaInfoPageModule)
   }
+
 ];
 @NgModule({
   imports: [
