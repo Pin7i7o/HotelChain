@@ -1,8 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>criar_conta_info</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -11,3 +7,56 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+
+
+
+<div class="container">
+
+  <img src="./assets/logo.png" alt="Imagem">
+
+  <p class="title">Informações Adicionais</p>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Gênero</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="showList"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="showList">
+      Item 1
+    </ion-item>
+    <ion-item *ngIf="showList">
+      Item 2
+    </ion-item>
+    <ion-item *ngIf="showList">
+      Item 3
+    </ion-item>
+    <!-- Adicione mais itens conforme necessário -->
+  </ion-list>
+
+
+  <div class="container">
+    <div class="rounded-icon-container">
+      <ion-icon name="calendar-outline" class="rounded-icon"></ion-icon>
+      <ion-item lines="none" class="rounded-item">
+        <ion-input placeholder="Data de Nascimento"></ion-input>
+      </ion-item>
+    </div>
+  
+    <div class="rounded-icon-container">
+      <ion-icon name="call-outline" class="rounded-icon"></ion-icon>
+      <ion-item lines="none" class="rounded-item">
+        <ion-input placeholder="Contato"></ion-input>
+      </ion-item>
+    </div>
+  
+    <ion-button expand="full" shape="round" class="confirmar-button">
+      Confirmar
+    </ion-button>
+  </div>
+  
+</div>
+
+
+
+

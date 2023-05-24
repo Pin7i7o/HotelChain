@@ -1,8 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>criar_conta</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -11,3 +7,47 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+
+<div class="image-container">
+  <ion-img 
+    style="height: 200px; width: 200px;"  
+    src="/assets/logo.png"
+  ></ion-img>
+</div>
+
+
+<div class="container">
+
+  <div class="rounded-icon-container">
+    <ion-icon name="mail-outline" class="rounded-icon"></ion-icon>
+    <ion-item lines="none" class="rounded-item">
+      <ion-input placeholder="E-mail"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="rounded-icon-container">
+    <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
+    <ion-item lines="none" class="rounded-item">
+      <ion-input placeholder="Username"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="rounded-icon-container">
+    <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
+    <ion-item lines="none" class="rounded-item">
+      <ion-input placeholder="Password"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button expand="full" shape="round" class="criar_conta-button">
+    Criar Conta
+  </ion-button>
+
+  <p class="login-text">
+    Já tem uma conta? <a href="#">Login</a>
+  </p>
+</div>
+
+
+
