@@ -12,6 +12,10 @@ const routes: Routes = [
         loadChildren: () => import('../mapas/maps.module').then(m => m.MapsPageModule)
       },
       {
+        path: 'alertas',
+        loadChildren: () => import('../alertas/alertas.module').then(m => m.AlertasPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/mapas',
         pathMatch: 'full'
@@ -29,4 +33,4 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule {} 

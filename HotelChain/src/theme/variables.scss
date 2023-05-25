@@ -233,4 +233,22 @@
 
     --ion-card-background: #1e1e1e;
   }
+
+  :root {
+    --ion-color-hotelchain: #DA763D;
+    --ion-color-hotelchain-rgb: 218,118,61;
+    --ion-color-hotelchain-contrast: #000000;
+    --ion-color-hotelchain-contrast-rgb: 0,0,0;
+    --ion-color-hotelchain-shade: #c06836;
+    --ion-color-hotelchain-tint: #de8450;
+  }
+  
+  .ion-color-hotelchain {
+    --ion-color-base: var(--ion-color-hotelchain);
+    --ion-color-base-rgb: var(--ion-color-hotelchain-rgb);
+    --ion-color-contrast: var(--ion-color-hotelchain-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-hotelchain-contrast-rgb);
+    --ion-color-shade: var(--ion-color-hotelchain-shade);
+    --ion-color-tint: var(--ion-color-hotelchain-tint);
+  }
 }
