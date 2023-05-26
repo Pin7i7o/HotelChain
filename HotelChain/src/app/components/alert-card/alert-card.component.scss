@@ -15,9 +15,6 @@ ion-button.round-button {
     --border-width: 1px;
    
     --ripple-color: rgb(246, 182, 133);
-  
-    --padding-top: 10px;
-    --padding-bottom: 10px;
 }
 
 ion-card.floors-background {
@@ -27,4 +24,8 @@ ion-card.floors-background {
     background-color: white;
     text-align: center;
     box-shadow: none;
+}
+
+ion-label{
+    white-space: nowrap;
 }
