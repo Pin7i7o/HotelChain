@@ -1,0 +1,23 @@
+ion-card{
+    .right-cut{
+        border-radius: 25px 0px 0px 25px;
+
+    }
+    .left-cut{
+        border-radius: 0px 25px 25px 0px;
+    }
+    .bottom-cut{
+        border-radius: 25px 25px 0px 0px;
+        border-bottom: 0px;
+    }
+
+    border-style: solid;
+    border-color: #F8A435;
+    background-color: white;
+    text-align: center;
+}
+
+ion-row.join-row{
+    margin-top: -30px;
+
+}

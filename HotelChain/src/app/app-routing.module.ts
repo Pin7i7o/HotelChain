@@ -21,7 +21,12 @@ const routes: Routes = [
   {
     path: 'criar-conta-info',
     loadChildren: () => import('./pages/criar-conta-info/criar-conta-info.module').then( m => m.CriarContaInfoPageModule)
+  },
+  {
+    path: 'problema-sensor',
+    loadChildren: () => import('./pages/problema-sensor/problema-sensor.module').then( m => m.ProblemaPageModule)
   }
+
 
 ];
 @NgModule({
