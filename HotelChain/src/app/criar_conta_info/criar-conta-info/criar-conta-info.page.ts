@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CriarContaInfoPage implements OnInit {
 
   showList: boolean = false;
-
+  selectedGender: string | null = null;
   
 
   constructor() { }

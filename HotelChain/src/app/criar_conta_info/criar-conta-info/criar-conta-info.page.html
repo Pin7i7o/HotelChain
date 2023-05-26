@@ -23,16 +23,19 @@
       <ion-toggle slot="end" [(ngModel)]="showList"></ion-toggle>
     </ion-item>
     <ion-item *ngIf="showList">
-      Item 1
+      <ion-label>Maculino</ion-label>
+      <ion-radio slot="end" [(ngModel)]="selectedGender" value="masculino"></ion-radio>
     </ion-item>
     <ion-item *ngIf="showList">
-      Item 2
+      <ion-label>Feminino</ion-label>
+      <ion-radio slot="end" [(ngModel)]="selectedGender" value="feminino"></ion-radio>
     </ion-item>
     <ion-item *ngIf="showList">
-      Item 3
+      <ion-label>Outro</ion-label>
+      <ion-radio slot="end" [(ngModel)]="selectedGender" value="outro"></ion-radio>
     </ion-item>
-    <!-- Adicione mais itens conforme necessário -->
   </ion-list>
+  
 
 
   <div class="container">
