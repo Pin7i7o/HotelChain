@@ -1,15 +1,16 @@
 <ion-card class="floors-background">
-  <ion-card-content>
-    <ion-item lines="none">
+    <ion-item lines="none" white-space="normal">
       <ion-row class="ion-align-items-center">
-        <ion-col size="4">
+        <ion-col size="2">
           <ion-button class="round-button">
             <ion-icon slot="icon-only" name="hammer"></ion-icon>
           </ion-button>
         </ion-col>
-        <ion-col size="8">
+        <ion-col size="1"></ion-col>
+        <ion-col size="9">
           <ion-label>
-            <p>{{data}}</p>
+            <p>Data: {{data}}</p>
+            <p>Prioridade: {{prioridade}}</p>
           </ion-label>
         </ion-col>
       </ion-row>
@@ -19,5 +20,4 @@
         <p>{{descricao}}</p>
       </ion-label>
     </ion-item>
-  </ion-card-content>
 </ion-card>

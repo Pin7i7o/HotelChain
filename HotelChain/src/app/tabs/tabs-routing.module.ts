@@ -9,11 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: 'mapas',
-        loadChildren: () => import('../mapas/maps.module').then(m => m.MapsPageModule)
+        loadChildren: () => import('../pages/mapas/maps.module').then(m => m.MapsPageModule)
       },
       {
         path: 'alertas',
-        loadChildren: () => import('../alertas/alertas.module').then(m => m.AlertasPageModule)
+        loadChildren: () => import('../pages/alertas/alertas.module').then(m => m.AlertasPageModule)
       },
       {
         path: '',
