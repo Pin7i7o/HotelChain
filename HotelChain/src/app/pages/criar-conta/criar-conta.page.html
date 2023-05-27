@@ -8,7 +8,6 @@
   </ion-header>
 </ion-content>
 
-
 <div class="image-container">
   <ion-img 
     style="height: 200px; width: 200px;"  
@@ -16,31 +15,29 @@
   ></ion-img>
 </div>
 
-
 <div class="container">
-
   <div class="rounded-icon-container">
     <ion-icon name="mail-outline" class="rounded-icon"></ion-icon>
     <ion-item lines="none" class="rounded-item">
-      <ion-input placeholder="E-mail"></ion-input>
+      <ion-input placeholder="E-mail" [(ngModel)]="utilizador.email"></ion-input>
     </ion-item>
   </div>
 
   <div class="rounded-icon-container">
     <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
     <ion-item lines="none" class="rounded-item">
-      <ion-input placeholder="Username"></ion-input>
+      <ion-input placeholder="Username" [(ngModel)]="utilizador.username"></ion-input>
     </ion-item>
   </div>
 
   <div class="rounded-icon-container">
     <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
     <ion-item lines="none" class="rounded-item">
-      <ion-input placeholder="Password"></ion-input>
+      <ion-input placeholder="Password" [(ngModel)]="utilizador.password"></ion-input>
     </ion-item>
   </div>
 
-  <ion-button expand="full" shape="round" class="criar_conta-button">
+  <ion-button expand="full" shape="round" class="criar_conta-button" (click)="criarConta()">
     Criar Conta
   </ion-button>
 
@@ -48,6 +45,7 @@
     Já tem uma conta? <a href="#">Login</a>
   </p>
 </div>
+
 
 
 

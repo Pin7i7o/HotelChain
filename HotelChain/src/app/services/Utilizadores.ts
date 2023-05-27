@@ -4,5 +4,8 @@ export interface Utilizadores{
     contacto: number;
     data_nascimento: Date;
     genero: string;
-    conta?: number;
+    username: string;
+    password: string;
 }
+
+

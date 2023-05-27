@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
 import { SupabaseService as AlertaSupabaseService } from './alerta.supabase.service';
-import { SupabaseService as ContasSupabaseService } from './Contas.supabase.service';
 import { SupabaseService as EquipamentoSupabaseService } from './Equipamento.supabase.service';
 import { SupabaseService as InfraestruturasSupabaseService } from './Infraestruturas.supabase.service';
 import { SupabaseService as PrioridadeSupabaseService } from './Prioridade.supabase.service';
@@ -10,7 +9,6 @@ import { SupabaseService as UtilizadoresSupabaseService } from './Utilizadores.s
 
 describe('SupabaseService', () => {
   let alertaService: AlertaSupabaseService;
-  let contasService: ContasSupabaseService;
   let equipamentoService: EquipamentoSupabaseService;
   let infraestruturasService: InfraestruturasSupabaseService;
   let prioridadeService: PrioridadeSupabaseService;
@@ -20,7 +18,6 @@ describe('SupabaseService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     alertaService = TestBed.inject(AlertaSupabaseService);
-    contasService = TestBed.inject(ContasSupabaseService);
     equipamentoService = TestBed.inject(EquipamentoSupabaseService);
     infraestruturasService = TestBed.inject(InfraestruturasSupabaseService);
     prioridadeService = TestBed.inject(PrioridadeSupabaseService);
@@ -30,7 +27,6 @@ describe('SupabaseService', () => {
 
   it('should be created', () => {
     expect(alertaService).toBeTruthy();
-    expect(contasService).toBeTruthy();
     expect(equipamentoService).toBeTruthy();
     expect(infraestruturasService).toBeTruthy();
     expect(prioridadeService).toBeTruthy();
