@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Utilizadores } from '../services/Utilizadores';
-import { SupabaseService } from '../services/Utilizadores.supabase.service.ts';
+import { Utilizadores } from '../../services/Utilizadores';
+import { SupabaseService } from '../../services/Utilizadores.supabase.service';
+
 
 @Component({
   selector: 'app-criar-conta',
@@ -24,7 +25,7 @@ export class CriarContaPage implements OnInit {
 
   criarConta() {
     this.SupabaseService.insertUtilizador(this.utilizador)
-      .then(data => {
+      .then((data: any) => {
         // Insert code for handling successful account creation
         console.log('Utilizador criado:', data);
       })
