@@ -9,24 +9,24 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   utilizadores: Utilizadores[];
   utilizador: Utilizadores;
   isLoadingUtilizadores: boolean;
   username!: string;
   password!: string;
+  error: string = '';
 
   constructor(private supabase: SupabaseService, public navCtrl: NavController) {
     this.utilizadores = [];
     this.utilizador = {
-      id: null || 0,
+      id: undefined,
       email: '',
-      contacto: null || 0,
+      contacto: 0,
       data_nascimento: new Date(),
       genero: '',
       username: '',
       password: ''
-    }
+    };
     this.isLoadingUtilizadores = true;
   }
 
@@ -40,28 +40,22 @@ export class LoginPage implements OnInit {
     this.isLoadingUtilizadores = false; 
   }
 
-  checkLogin(){
-     let check = false;
-     let size = 0;
-
-     while (check == false || size != this.utilizadores.length) {
-      for (let index = 0; index < this.utilizadores.length; index++) {
-        if(this.utilizadores[index].username == this.username && this.utilizadores[index].password == this.password){
-          check = true;
-        } else{
-          check = false;
-          size++;
-        }
-      }
-     }
-
-     if(check){
+  checkLogin() {
+    const trimmedUsername = this.username.trim();
+    const trimmedPassword = this.password.trim();
+  
+    const foundUser = this.utilizadores.find(user =>
+      user.username === trimmedUsername && user.password === trimmedPassword
+    );
+  
+    if (foundUser) {
       this.navCtrl.navigateForward('home');
-     }
+    } else {
+      this.error = 'Invalid login credentials. Please try again.';
+    }
   }
-
-  ngOnInit() {}
-
   
 
+  ngOnInit() {}
 }
+

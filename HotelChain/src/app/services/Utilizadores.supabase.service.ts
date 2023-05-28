@@ -19,15 +19,18 @@ export class SupabaseService {
    async getUtilizadores(): Promise<Utilizadores[]> {
     const { data, error } = await this.supabaseClient
       .from('Utilizadores')
-      .select('*')
+      .select('*');
+
+    console.log('Data:', data); // Add this console log
+    console.log('Error:', error); // Add this console log
 
     if (error) {
+      console.error('Error fetching utilizadores:', error);
       return [];
     }
 
     return data as Utilizadores[];
   }
-
   async getUtilizadorById(id: number): Promise<Utilizadores> {
     const { data, error } = await this.supabaseClient
       .from('utilizadores')

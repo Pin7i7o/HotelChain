@@ -12,14 +12,14 @@
     <div class="rounded-icon-container">
       <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
       <ion-item lines="none" class="rounded-item">
-        <ion-input placeholder="Username" [(ngModel)]= "username"></ion-input>
+        <ion-input placeholder="Username" [(ngModel)]="username" id="usernameField"></ion-input>
       </ion-item>
     </div>
   
     <div class="rounded-icon-container">
       <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
       <ion-item lines="none" class="rounded-item">
-        <ion-input type="password" placeholder="Password" [(ngModel)]= "password"></ion-input>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password" id="passwordField"></ion-input>
       </ion-item>
     </div>
   
@@ -32,4 +32,10 @@
       <p> Esqueceu-se da password? <a href="#">Recuperar</a></p>
     </div>
   </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+  
 </ion-content>
+
