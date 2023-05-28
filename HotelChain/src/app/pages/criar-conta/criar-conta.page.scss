@@ -6,6 +6,20 @@
     background-color: transparent;
   }
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height:45vh;
+  }
+   .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
   .rounded-icon {
     font-size: 24px;
     margin-right: 8px;

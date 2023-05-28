@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/alertas/alertas.module').then(m => m.AlertasPageModule)
       },
       {
+        path: 'home',
+        loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/mapas',
         pathMatch: 'full'

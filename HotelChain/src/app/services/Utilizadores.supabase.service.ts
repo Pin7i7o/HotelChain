@@ -18,9 +18,8 @@ export class SupabaseService {
 
    async getUtilizadores(): Promise<Utilizadores[]> {
     const { data, error } = await this.supabaseClient
-      .from('utilizadores')
+      .from('Utilizadores')
       .select('*')
-      .order('username', { ascending: true });
 
     if (error) {
       return [];
