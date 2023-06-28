@@ -15,14 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'criar-conta',
-    loadChildren: () => import('./pages/criar-conta/criar-conta.module').then( m => m.CriarContaPageModule)
-  },
-  {
-    path: 'criar-conta-info',
-    loadChildren: () => import('./pages/criar-conta-info/criar-conta-info.module').then( m => m.CriarContaInfoPageModule)
-  },
-  {
     path: 'problema-sensor',
     loadChildren: () => import('./pages/problema-sensor/problema-sensor.module').then( m => m.ProblemaPageModule)
   },

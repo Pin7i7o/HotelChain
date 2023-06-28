@@ -9,32 +9,30 @@
   
 
   <div class="container">
-    <div class="rounded-icon-container">
-      <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
-      <ion-item lines="none" class="rounded-item">
-        <ion-input placeholder="Username" [(ngModel)]="username" id="usernameField"></ion-input>
-      </ion-item>
-    </div>
+    <form [formGroup]="loginForm">
+      <div class="rounded-icon-container">
+        <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
+        <ion-item lines="none" class="rounded-item">
+          <ion-input formControlName="username" type="text"></ion-input>
+        </ion-item>
+      </div>
   
-    <div class="rounded-icon-container">
-      <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
-      <ion-item lines="none" class="rounded-item">
-        <ion-input type="password" placeholder="Password" [(ngModel)]="password" id="passwordField"></ion-input>
-      </ion-item>
-    </div>
+      <div class="rounded-icon-container">
+        <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
+          <ion-item lines="none" class="rounded-item">
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+      </div>
   
-    <ion-button expand="full" shape="round" class="login-button" (click)="checkLogin()">
-      Login
-    </ion-button>
-  
-    <div class="create-account-text">
-      <p> Ainda não tem uma conta? <a href="criar-conta">Criar Conta</a></p>
-      <p> Esqueceu-se da password? <a href="#">Recuperar</a></p>
-    </div>
-  </div>
+      <ion-button expand="full" shape="round" class="login-button" (click)="login()">
+        Login
+      </ion-button>
 
-  <div *ngIf="error" class="error-message">
-    {{ error }}
+      <div class="create-account-text">
+        <p> Ainda não tem uma conta? <a href="criar-conta">Criar Conta</a></p>
+        <p> Esqueceu-se da password? <a href="#">Recuperar</a></p>
+      </div>
+    </form>
   </div>
   
 </ion-content>
