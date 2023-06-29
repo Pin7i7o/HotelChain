@@ -14,7 +14,19 @@ export class HomePage implements OnInit {
   }
 
   goToMapsPage(){
-    this.navCtrl.navigateForward('');
+    this.navCtrl.navigateForward('mapas');
+  }
+
+  goToAlertsPage(){
+    this.navCtrl.navigateForward('alertas');
+  }
+
+  goToInfoPage(){
+    this.navCtrl.navigateForward('info');
+  }
+
+  goToProfilePage(){
+    this.navCtrl.navigateForward('perfil');
   }
 
 }

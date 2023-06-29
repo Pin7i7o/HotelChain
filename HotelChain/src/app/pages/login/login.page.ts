@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../services/login-service.service';
+import { LoginService } from '../../services/login-service.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginPage implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private loginService: LoginService
   ) {}
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
   async login() {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
-      const loggedIn = await this.authService.login(username, password);
+      const loggedIn = await this.loginService.login(username, password);
 
       if (loggedIn) {
         // Login bem-sucedido, redirecionar para a página principal ou realizar ação adequada

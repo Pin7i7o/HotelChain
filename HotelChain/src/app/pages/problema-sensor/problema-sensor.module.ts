@@ -7,20 +7,19 @@ import { IonicModule } from '@ionic/angular';
 import { ProblemaPageRoutingModule } from './problema-sensor-routing.module';
 
 import { ProblemaSensorPage } from './problema-sensor.page';
-import { ProblemaCardComponent } from 'src/app/components/problema/problema-card/problema-card.component';
-import { ProblemSignCardComponent } from 'src/app/components/problema/problem-sign-card/problem-sign-card.component';
+
+import { SharedModule } from '../../modules/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProblemaPageRoutingModule
+    ProblemaPageRoutingModule,
+    SharedModule
   ],
   declarations: [
     ProblemaSensorPage,
-    ProblemaCardComponent,
-    ProblemSignCardComponent
   ]
 })
 export class ProblemaPageModule {}

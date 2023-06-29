@@ -7,18 +7,19 @@ import { IonicModule } from '@ionic/angular';
 import { AlertasPageRoutingModule } from './alertas-routing.module';
 
 import { AlertasPage } from './alertas.page';
-import { AlertCardComponent } from '../../components/alert-card/alert-card.component';
+
+import { SharedModule } from '../../modules/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AlertasPageRoutingModule
+    AlertasPageRoutingModule,
+    SharedModule
   ],
   declarations: [
-    AlertasPage,
-    AlertCardComponent
+    AlertasPage
   ]
 })
 export class AlertasPageModule {}

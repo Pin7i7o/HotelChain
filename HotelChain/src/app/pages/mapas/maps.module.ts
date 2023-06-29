@@ -7,13 +7,16 @@ import { ExploreContainerComponentModule } from '../../explore-container/explore
 
 import { MapsPageRoutingModule } from './maps-routing.module';
 
+import { SharedModule } from '../../modules/shared/shared.module';
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    MapsPageRoutingModule
+    MapsPageRoutingModule,
+    SharedModule
   ],
   declarations: [MapsPage]
 })

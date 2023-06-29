@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class AlertCardComponent  implements OnInit {
 
-  @Input()descricao!: string;
+  @Input() descricao!: string;
   @Input() data!: string;
   @Input() prioridade!: string;
   @Input() icon!: string;

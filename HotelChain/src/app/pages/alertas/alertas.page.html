@@ -1,21 +1,6 @@
 <ion-header [translucent]="true">
   <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-title>
-        <ion-row class="ion-align-items-center">
-            <ion-col size="2">
-                <ion-img src="/assets/logoH.png" alt="logo"></ion-img>
-            </ion-col>
-            <ion-col size = "1"></ion-col>
-            <ion-col size="7" class="title-col">
-                 Alertas
-            </ion-col>
-            <ion-col size="2">
-              <ion-icon size="large" name="help-circle-outline"></ion-icon>
-            </ion-col>
-        </ion-row>
-      </ion-title>
-    </ion-toolbar>
+    <app-header header="Alertas"></app-header>
   </ion-header>
 </ion-header>
 
@@ -38,7 +23,6 @@
   </ion-item>
 
   <ion-row style="height: 10px;" class="background"></ion-row>
-
   <app-alert-card descricao="Frigorifíco ligado" data="2022/02/26 14:56:32" prioridade="Alta" icon="help-circle-outline"></app-alert-card>
   <app-alert-card descricao="Frigorifíco Desligado" data="2022/02/26 14:56:32" prioridade="Alta" icon="hammer"></app-alert-card>
 </ion-content>

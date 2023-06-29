@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class LoginService {
   private _storage: Storage | null = null;
 
   constructor(private storage: Storage, private router: Router) {

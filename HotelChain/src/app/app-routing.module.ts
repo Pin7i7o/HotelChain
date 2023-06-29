@@ -7,12 +7,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+    path: 'mapas',
+    loadChildren: () => import('./pages/mapas/maps.module').then( m => m.MapsPageModule)
   },
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'alertas',
+    loadChildren: () => import('./pages/alertas/alertas.module').then( m => m.AlertasPageModule)
   },
   {
     path: 'problema-sensor',
@@ -25,6 +29,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('././tabs/tabs.module').then( m => m.TabsPageModule)
   },
 
 ];
