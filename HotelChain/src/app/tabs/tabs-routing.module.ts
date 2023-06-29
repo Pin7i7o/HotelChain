@@ -20,6 +20,14 @@ const routes: Routes = [
         loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
       },
       {
+        path: 'info',
+        loadChildren: () => import('../pages/info/info.module').then(m => m.InfoPageModule)
+      },
+      {
+        path: 'perfil',
+        loadChildren: () => import('../pages/perfil/perfil.module').then(m => m.PerfilPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/mapas',
         pathMatch: 'full'

@@ -18,6 +18,15 @@ const routes: Routes = [
     path: 'problema-sensor',
     loadChildren: () => import('./pages/problema-sensor/problema-sensor.module').then( m => m.ProblemaPageModule)
   },
+  {
+    path: 'info',
+    loadChildren: () => import('./pages/info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
 ];
 @NgModule({
   imports: [
