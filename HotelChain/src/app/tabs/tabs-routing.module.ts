@@ -29,7 +29,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/mapas',
+        redirectTo: '/home',
         pathMatch: 'full'
       }
       
@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/mapas',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];

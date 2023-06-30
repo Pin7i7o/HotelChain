@@ -1,19 +1,20 @@
 <ion-tabs >
-  <ion-tab-bar>
-    <ion-tab-button tab="mapas">
-      <ion-icon aria-hidden="true" name="map"></ion-icon>
-      <ion-label>Mapas</ion-label>
-    </ion-tab-button> 
+  <ng-container *ngIf="selectedTab !== 'home'">
+    <ion-tab-bar>
+     <ion-tab-button tab="mapas">
+       <ion-icon aria-hidden="true" name="map"></ion-icon>
+        <ion-label>Mapas</ion-label>
+      </ion-tab-button> 
 
-    <ion-tab-button tab="home">
-      <ion-icon aria-hidden="true" name="home"></ion-icon>
-      <ion-label>Home</ion-label>
-    </ion-tab-button> 
+      <ion-tab-button tab="home">
+        <ion-icon aria-hidden="true" name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button> 
 
-    <ion-tab-button tab="alertas">
-      <ion-icon aria-hidden="true" name="notifications"></ion-icon>
-      <ion-label>Alertas</ion-label>
-    </ion-tab-button> 
-  </ion-tab-bar>
-
+      <ion-tab-button tab="alertas">
+        <ion-icon aria-hidden="true" name="notifications"></ion-icon>
+        <ion-label>Alertas</ion-label>
+      </ion-tab-button> 
+    </ion-tab-bar>  
+  </ng-container>
 </ion-tabs>
