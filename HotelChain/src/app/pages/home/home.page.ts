@@ -7,10 +7,13 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  username: string = '';
 
   constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
+    const storedUsername = localStorage.getItem('username');
+    this.username = storedUsername !== null ? storedUsername : '';
   }
 
   goToMapsPage(){

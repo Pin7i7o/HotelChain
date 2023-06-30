@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
       const loggedIn = await this.loginService.login(username, password);
 
       if (loggedIn) {
-        // Login bem-sucedido, redirecionar para a página principal ou realizar ação adequada
+        localStorage.setItem('username', username);
         console.log('Login realizado com sucesso!');
       } else {
         // Login falhou, exibir mensagem de erro ou realizar ação adequada
