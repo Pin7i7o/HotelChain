@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Alerta, AlertsServiceService} from '../../services/alerts-service.service';
 
 @Component({
   selector: 'app-alertas',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertasPage implements OnInit {
 
-  constructor() { }
+  alertas: Alerta[] = [];
 
-  ngOnInit() {
+  constructor(private alertService: AlertsServiceService) { }
+
+  async ngOnInit() {
+    await this.alertService.init();
+    this.alertas = this.alertService.getAlertas();
   }
 
+  async deleteAlerta(alerta: Alerta) {
+    await this.alertService.deleteAlert(alerta.id);
+  }
+
+  getIcon(alerta: Alerta): string{
+    switch (alerta.tipo) {
+      case 'Sensor':
+        return 'help-circle-outline';
+      case 'Manutencao':
+        return 'hammer';
+      default:
+        return '';
+    }
+  }
 }

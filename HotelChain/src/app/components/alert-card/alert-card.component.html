@@ -1,4 +1,4 @@
-<ion-card class="floors-background">
+<ion-card class="floors-background max-width">
     <ion-item lines="none">
       <ion-row class="ion-align-items-center">
         <ion-col size="2">
@@ -6,10 +6,10 @@
             <ion-icon slot="icon-only" name={{icon}}></ion-icon>
           </ion-button>
         </ion-col>
-        <ion-col size="1"></ion-col>
-        <ion-col size="9">
-          <ion-label>
-            <p>Data: {{data}}</p>
+        <ion-col size="2"></ion-col>
+        <ion-col size="8">
+          <ion-label class="ion-text-end">
+            <p>Data: {{data | date:'yyyy/MM/dd'}}</p>
             <p>Prioridade: {{prioridade}}</p>
           </ion-label>
         </ion-col>

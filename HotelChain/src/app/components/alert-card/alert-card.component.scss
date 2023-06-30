@@ -26,6 +26,11 @@ ion-card.floors-background {
     box-shadow: none;
 }
 
+ion-card.max-width {
+    width: 300px;
+}
+
 ion-label{
     white-space: nowrap;
+    width: 170px;
 }
