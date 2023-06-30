@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class LoginService {
   private _storage: Storage | null = null;
 
-  constructor(private storage: Storage, private router: Router) {
+  constructor(private storage: Storage) {
     this.init();
   }
 
@@ -21,21 +21,18 @@ export class LoginService {
     // Verificar se as credenciais são as predefinidas
     if (username === 'guest' && password === 'password') {
       await this._storage?.set('username', username);
-      this.router.navigateByUrl('/home');
       return true;
     } else {
       return false;
     }
   }
 
+  async getUser(): Promise<string>{
+    return this._storage?.get('username') || '';
+  }
+
   async logout() {
     // Remover as informações do usuário do LocalStorage
     await this._storage?.remove('username');
-  }
-
-  async isAuthenticated(): Promise<boolean> {
-    // Verificar se o usuário está autenticado
-    const username = await this._storage?.get('username');
-    return !!username; // Retorna true se o username existir e false caso contrário
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { LoginService } from '../../services/login-service.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,10 @@ import { NavController } from '@ionic/angular';
 export class HomePage implements OnInit {
   username: string = '';
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, private loginService: LoginService) { }
 
-  ngOnInit() {
-    const storedUsername = localStorage.getItem('username');
-    this.username = storedUsername !== null ? storedUsername : '';
+  async ngOnInit() {
+    this.username = await this.loginService.getUser();
   }
 
   goToMapsPage(){
