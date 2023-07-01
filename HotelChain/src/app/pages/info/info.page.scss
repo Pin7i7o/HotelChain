@@ -7,9 +7,8 @@ ion-card.card-button {
     padding: 0;
   }
   
-  ion-icon.big-icon {
-    font-size: 100px;
-    width: 100%;
+  ion-icon.orange-icon {
+    color: orange;
   }
   
   ion-col.img {
@@ -27,5 +26,44 @@ ion-card.card-button {
   ion-row.ion-justify-content-end {
     justify-content: flex-end;
   }
+
+
+
+  .icon-row {
+    height: 25vh; /* Define a altura total da página */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-container {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #F8A435;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-letter {
+    font-size: 48px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-weight: bold;
+    color: white;
+  }
+  
+  
+
+  
+
+
+  
   
   
