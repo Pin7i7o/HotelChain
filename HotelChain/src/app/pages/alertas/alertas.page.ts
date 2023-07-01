@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Alerta, AlertsServiceService} from '../../services/alerts-service.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-alertas',
@@ -9,12 +11,23 @@ import {Alerta, AlertsServiceService} from '../../services/alerts-service.servic
 export class AlertasPage implements OnInit {
 
   alertas: Alerta[] = [];
+  altaAlertas: Alerta[] = [];
+  baixaAlertas: Alerta[] = [];
+  sortedAlertas: Alerta[] = [];
+  selectedPriority: string = '';
 
-  constructor(private alertService: AlertsServiceService) { }
+  constructor(private alertService: AlertsServiceService, private router: Router) { }
 
   async ngOnInit() {
     await this.alertService.init();
     this.alertas = this.alertService.getAlertas();
+    this.alertas.forEach(a => {
+      if (a.prioridade === 'Baixa') {
+        this.baixaAlertas.push(a);
+      } else if (a.prioridade === 'Alta'){
+        this.altaAlertas.push(a);
+      }
+    });
   }
 
   async deleteAlerta(alerta: Alerta) {
@@ -31,4 +44,35 @@ export class AlertasPage implements OnInit {
         return '';
     }
   }
+  
+  sortAlertas(){
+  let sortedArray: Array<Alerta> = [];
+
+  if(this.selectedPriority === 'Baixa'){
+    this.baixaAlertas.forEach(a => {
+      sortedArray.push(a);
+    });
+    this.altaAlertas.forEach(a => {
+      sortedArray.push(a);
+    });
+    this.alertas = sortedArray;
+
+    } else if(this.selectedPriority === 'Alta'){
+      this.altaAlertas.forEach(a => {
+        sortedArray.push(a);
+      });
+      this.baixaAlertas.forEach(a => {
+        sortedArray.push(a);
+      });
+      this.alertas = sortedArray;
+
+    } else{
+      this.alertas = this.alertService.getAlertas();
+    }
+  }
+  
+  goToAlertaDetailsPage(alerta: Alerta) {
+    this.router.navigate(['/problema'], { queryParams: alerta });
+  }
+  
 }

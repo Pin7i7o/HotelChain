@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProblemSignCardComponent  implements OnInit {
 
-  @Input() icon!: string;
-
   constructor() { }
 
   ngOnInit() {}

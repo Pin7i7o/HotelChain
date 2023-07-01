@@ -1,6 +1,11 @@
 <ion-tabs >
   <ng-container *ngIf="selectedTab !== 'home'">
     <ion-tab-bar>
+      <ion-tab-button tab="info">
+        <ion-icon aria-hidden="true" name="information-circle"></ion-icon>
+        <ion-label>Informação</ion-label>
+      </ion-tab-button> 
+
      <ion-tab-button tab="mapas">
        <ion-icon aria-hidden="true" name="map"></ion-icon>
         <ion-label>Mapas</ion-label>
@@ -14,7 +19,13 @@
       <ion-tab-button tab="alertas">
         <ion-icon aria-hidden="true" name="notifications"></ion-icon>
         <ion-label>Alertas</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="perfil">
+        <ion-icon aria-hidden="true" name="person"></ion-icon>
+        <ion-label>Perfil</ion-label>
       </ion-tab-button> 
+
     </ion-tab-bar>  
   </ng-container>
 </ion-tabs>

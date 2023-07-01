@@ -8,6 +8,8 @@ export interface Alerta {
   descricao: string;
   prioridade: string;
   tipo: string;
+  infraestrutura: number;
+  equipamento: number;
   concluido: boolean;
 }
 
@@ -46,6 +48,8 @@ export class AlertsServiceService {
         descricao: 'Novo Sensor Adicionado', 
         prioridade: 'Alta', 
         tipo: 'Sensor', 
+        infraestrutura: 258,
+        equipamento: 1298,
         concluido: false 
       },
       { 
@@ -55,6 +59,8 @@ export class AlertsServiceService {
         descricao: 'Frigorífico Desligado', 
         prioridade: 'Alta', 
         tipo: 'Manutencao', 
+        infraestrutura: 322,
+        equipamento: 945,
         concluido: false 
       },
       { 
@@ -64,6 +70,8 @@ export class AlertsServiceService {
         descricao: 'Televisão Ligada', 
         prioridade: 'Baixa', 
         tipo: 'Manutencao', 
+        infraestrutura: 101,
+        equipamento: 2150,
         concluido: false 
       },
       { 
@@ -72,6 +80,8 @@ export class AlertsServiceService {
         data: new Date(), 
         descricao: 'Novo Sensor Adicionado', 
         prioridade: 'Alta', 
+        infraestrutura: 120,
+        equipamento: 654,
         tipo: 'Sensor', 
         concluido: false 
       }

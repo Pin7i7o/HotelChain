@@ -10,6 +10,8 @@
 
   <ion-item>
     <ion-select 
+      [(ngModel)]="selectedPriority"
+      (ionChange)="sortAlertas()"
       justify="space-between" 
       label="Prioridade" 
       placeholder="Prioridade"
@@ -17,8 +19,8 @@
       style="font-size: larger;"
       cancel-text="Cancelar"
     >
-      <ion-select-option value="alta">Alta</ion-select-option>
-      <ion-select-option value="baixa">Baixa</ion-select-option>
+      <ion-select-option value="Alta">Alta</ion-select-option>
+      <ion-select-option value="Baixa">Baixa</ion-select-option>
     </ion-select>
   </ion-item>
 
@@ -30,6 +32,7 @@
         [data]="alerta.data"
         [prioridade]="alerta.prioridade"
         [icon]="getIcon(alerta)"
+        (click)="goToAlertaDetailsPage(alerta)"
       ></app-alert-card>
     </ion-item>
   </ion-list>
