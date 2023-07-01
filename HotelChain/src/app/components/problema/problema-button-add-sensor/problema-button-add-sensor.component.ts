@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-problema-button-add-sensor',
@@ -7,8 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProblemaButtonAddSensorComponent  implements OnInit {
 
-  constructor() { }
+  sensorAdded: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {}
+
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+  
+
+  addSensor() {
+    this.sensorAdded = true;
+  
+    setTimeout(() => {
+      this.sensorAdded = false;
+      this.navigateToHome();
+    }, 3000);
+  }
 
 }
