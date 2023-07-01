@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Alerta} from '../../services/alerts-service.service';
+import { Alerta } from '../../services/alerts-service.service';
 
 @Component({
   selector: 'app-problema',

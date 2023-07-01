@@ -6,7 +6,8 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { AlertCardComponent } from '../../components/alert-card/alert-card.component';
 import { ProblemaCardComponent } from 'src/app/components/problema/problema-card/problema-card.component';
 import { ProblemSignCardComponent } from 'src/app/components/problema/problem-sign-card/problem-sign-card.component';
-
+import { ProblemaButtonAddSensorComponent } from 'src/app/components/problema/problema-button-add-sensor/problema-button-add-sensor.component';
+import { ProblemaButtonCallEmployeesComponent } from 'src/app/components/problema/problema-button-call-employees/problema-button-call-employees.component';
 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { ProblemSignCardComponent } from 'src/app/components/problema/problem-si
     HeaderComponent,
     AlertCardComponent,
     ProblemaCardComponent,
-    ProblemSignCardComponent
+    ProblemSignCardComponent,
+    ProblemaButtonAddSensorComponent,
+    ProblemaButtonCallEmployeesComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,9 @@ import { ProblemSignCardComponent } from 'src/app/components/problema/problem-si
     HeaderComponent,
     AlertCardComponent,
     ProblemaCardComponent,
-    ProblemSignCardComponent
+    ProblemSignCardComponent,
+    ProblemaButtonAddSensorComponent,
+    ProblemaButtonCallEmployeesComponent
   ]
 })
 export class SharedModule { }

@@ -19,14 +19,13 @@
       [descricao]="alerta.descricao"
     ></app-problema-card>
 
-  <ion-row style="height: 50px;"></ion-row>
-  <ion-row>
-    <ion-col size="3"></ion-col>
-    <ion-col size="6">
-      <ion-button>
-        Adiconar Sensor
-      </ion-button>
-    </ion-col>
-    <ion-col size="3"></ion-col>
-  </ion-row>
+    <ng-container *ngIf="alerta && alerta.tipo === 'Sensor'; else manutencaoCard">
+      <app-problema-button-add-sensor></app-problema-button-add-sensor>
+    </ng-container>
+    
+    <ng-template #manutencaoCard>
+      <app-problema-button-call-employees></app-problema-button-call-employees>
+    </ng-template>
+
+    
 </ion-content>
