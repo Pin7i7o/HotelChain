@@ -8,8 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProblemaCardComponent  implements OnInit {
 
   @Input() prioridade!: string;
-  @Input() infraestrutura!: string;
-  @Input() equipamento!: string;
+  @Input() infraestrutura!: number;
+  @Input() equipamento!: number;
   @Input() descricao!: string;
 
   constructor() { }

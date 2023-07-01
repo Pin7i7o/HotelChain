@@ -32,6 +32,7 @@
         [data]="alerta.data"
         [prioridade]="alerta.prioridade"
         [icon]="getIcon(alerta)"
+        (click)="goToAlertaDetailsPage(alerta)"
       ></app-alert-card>
     </ion-item>
   </ion-list>

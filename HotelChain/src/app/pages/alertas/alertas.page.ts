@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Alerta, AlertsServiceService} from '../../services/alerts-service.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-alertas',
@@ -14,7 +16,7 @@ export class AlertasPage implements OnInit {
   sortedAlertas: Alerta[] = [];
   selectedPriority: string = '';
 
-  constructor(private alertService: AlertsServiceService) { }
+  constructor(private alertService: AlertsServiceService, private router: Router) { }
 
   async ngOnInit() {
     await this.alertService.init();
@@ -67,6 +69,10 @@ export class AlertasPage implements OnInit {
     } else{
       this.alertas = this.alertService.getAlertas();
     }
+  }
+  
+  goToAlertaDetailsPage(alerta: Alerta) {
+    this.router.navigate(['/problema'], { queryParams: alerta });
   }
   
 }

@@ -19,7 +19,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/alertas/alertas.module').then( m => m.AlertasPageModule)
   },
   {
-    path: 'problema-sensor',
+    path: 'problema',
     loadChildren: () => import('./pages/problema-sensor/problema-sensor.module').then( m => m.ProblemaPageModule)
   },
   {
