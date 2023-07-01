@@ -27,10 +27,13 @@ ion-card.card-button {
     justify-content: flex-end;
   }
 
-
+  ion-icon.big-icon {
+    font-size: 100px;
+    width: 100%;
+}
 
   .icon-row {
-    height: 25vh; /* Define a altura total da página */
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,12 +61,3 @@ ion-card.card-button {
     font-weight: bold;
     color: white;
   }
-  
-  
-
-  
-
-
-  
-  
-  
