@@ -1,0 +1,31 @@
+ion-card.card-button {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #F8A435;
+    background-color: white;
+    text-align: center;
+    padding: 0;
+  }
+  
+  ion-icon.big-icon {
+    font-size: 100px;
+    width: 100%;
+  }
+  
+  ion-col.img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  
+  ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  ion-row.ion-justify-content-end {
+    justify-content: flex-end;
+  }
+  
+  
