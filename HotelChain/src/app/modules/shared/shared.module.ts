@@ -7,8 +7,6 @@ import { AlertCardComponent } from '../../components/alert-card/alert-card.compo
 import { ProblemaCardComponent } from 'src/app/components/problema/problema-card/problema-card.component';
 import { ProblemSignCardComponent } from 'src/app/components/problema/problem-sign-card/problem-sign-card.component';
 import { ProblemaButtonAddSensorComponent } from 'src/app/components/problema/problema-button-add-sensor/problema-button-add-sensor.component';
-import { ProblemaButtonCallEmployeesComponent } from 'src/app/components/problema/problema-button-call-employees/problema-button-call-employees.component';
-
 
 @NgModule({
   declarations: [
@@ -16,8 +14,7 @@ import { ProblemaButtonCallEmployeesComponent } from 'src/app/components/problem
     AlertCardComponent,
     ProblemaCardComponent,
     ProblemSignCardComponent,
-    ProblemaButtonAddSensorComponent,
-    ProblemaButtonCallEmployeesComponent
+    ProblemaButtonAddSensorComponent
   ],
   imports: [
     CommonModule,
@@ -28,8 +25,7 @@ import { ProblemaButtonCallEmployeesComponent } from 'src/app/components/problem
     AlertCardComponent,
     ProblemaCardComponent,
     ProblemSignCardComponent,
-    ProblemaButtonAddSensorComponent,
-    ProblemaButtonCallEmployeesComponent
+    ProblemaButtonAddSensorComponent
   ]
 })
 export class SharedModule { }

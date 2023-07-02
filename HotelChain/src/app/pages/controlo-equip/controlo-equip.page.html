@@ -1,13 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>controlo-equip</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Equipamento</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">controlo-equip</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-row style="height: 25px;"></ion-row>
+  <app-problem-sign-card></app-problem-sign-card>
+  <ion-row style="height: 50px;"></ion-row>
 </ion-content>

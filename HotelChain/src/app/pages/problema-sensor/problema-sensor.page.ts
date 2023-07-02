@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Alerta } from '../../services/alerts-service.service';
 
 @Component({
@@ -11,12 +11,16 @@ import { Alerta } from '../../services/alerts-service.service';
 export class ProblemaSensorPage implements OnInit {
   alerta: Alerta | null = null;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private acRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe((params) => {
+    this.acRoute.queryParams.subscribe((params) => {
       this.alerta = params as Alerta;
     });
+  }
+
+  goToEquipmentPage() {
+    this.router.navigate(['//controlo-equip'], { queryParams: this.alerta });
   }
 
 }

@@ -8,12 +8,15 @@ import { ControloEquipPageRoutingModule } from './controlo-equip-routing.module'
 
 import { ControloEquipPage } from './controlo-equip.page';
 
+import { SharedModule } from '../../modules/shared/shared.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ControloEquipPageRoutingModule
+    ControloEquipPageRoutingModule,
+    SharedModule
   ],
   declarations: [ControloEquipPage]
 })
