@@ -89,6 +89,18 @@ export class AlertsServiceService {
         equipamento: 654,
         controlo: 'Vol',
         concluido: false 
+      },
+      { 
+        id : 5,
+        user: 'guest', 
+        data: new Date(), 
+        descricao: 'Chuveiro com uma fuga', 
+        prioridade: 'Alta', 
+        tipo: 'Manutencao', 
+        infraestrutura: 488,
+        equipamento: 2469,
+        controlo: 'None',
+        concluido: false 
       }
     ]
 
