@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <app-header header="Instruções"></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row style="height: 100px;">
+    <ion-col size="1"></ion-col>
+    <ion-col size="7">
+      <ion-card class="card-inst" (click)="toggleCardContent('alertas')">
+        <ion-card-content>
+          Alertas
+        </ion-card-content>
+        <ion-card *ngIf="showCardContent === 'alertas'" class="card-inst">
+          <ion-card-content>
+            Para utilizar os alertas, você precisa...
+          </ion-card-content>
+        </ion-card>
+      </ion-card>
+
+      <ion-card class="card-inst" (click)="toggleCardContent('mapas')">
+        <ion-card-content>
+          Mapas
+        </ion-card-content>
+        <ion-card *ngIf="showCardContent === 'mapas'" class="card-inst">
+          <ion-card-content>
+            Para usar os mapas, você precisa...
+          </ion-card-content>
+        </ion-card>
+      </ion-card>
+
+      <ion-card class="card-inst" style="height: 50px;">
+        <ion-card-content class="card-content">
+          Indique o piso
+        </ion-card-content>
+      </ion-card>
+      <ion-button expand="full" (click)="enviarDados()">Enviar</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+
+
+

@@ -28,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/perfil/perfil.module').then(m => m.PerfilPageModule)
       },
       {
+        path: 'instrucoes',
+        loadChildren: () => import('../pages/instrucoes/instrucoes.module').then(m => m.InstrucoesPageModule)
+      },
+      {
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'

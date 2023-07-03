@@ -33,9 +33,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('././tabs/tabs.module').then( m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'controlo-equip',
     loadChildren: () => import('./pages/controlo-equip/controlo-equip.module').then( m => m.ControloEquipPageModule)
+  },
+  {
+    path: 'instrucoes',
+    loadChildren: () => import('./pages/instrucoes/instrucoes.module').then( m => m.InstrucoesPageModule)
   },
 
 
