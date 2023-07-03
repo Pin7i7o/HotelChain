@@ -1,11 +1,18 @@
 <ion-header [translucent]="true">
-  <app-header header="Instruções"></app-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Instruções</ion-title>
+  </ion-toolbar>
 </ion-header>
+
+<div class="card-spacing"></div>
 
 <ion-content [fullscreen]="true">
   <ion-row style="height: 100px;">
     <ion-col size="1"></ion-col>
-    <ion-col size="7">
+    <ion-col size="10">
       <ion-card class="card-inst" (click)="toggleCardContent('alertas')">
         <ion-card-content>
           Alertas
@@ -15,7 +22,14 @@
             Para utilizar os alertas, você precisa...
           </ion-card-content>
         </ion-card>
+        <ion-card *ngIf="showCardContent === 'alertas'" class="card-inst">
+          <ion-card-content>
+            Para utilizar os alertas, você precisa...
+          </ion-card-content>
+        </ion-card>
       </ion-card>
+
+      <div class="card-spacing"></div> <!-- Espaçamento personalizado -->
 
       <ion-card class="card-inst" (click)="toggleCardContent('mapas')">
         <ion-card-content>
@@ -28,15 +42,24 @@
         </ion-card>
       </ion-card>
 
+      <div class="card-spacing"></div>
+
+      <div class="card-text">
+        Escreva aqui a sua questão para o suporte técnico:
+      </div>
+
       <ion-card class="card-inst" style="height: 50px;">
         <ion-card-content class="card-content">
-          Indique o piso
+          Escreva a sua mensagem
         </ion-card-content>
       </ion-card>
+
       <ion-button expand="full" (click)="enviarDados()">Enviar</ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
+
+
 
 
 
