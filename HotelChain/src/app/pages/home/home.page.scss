@@ -52,3 +52,8 @@ ion-col.img {
     display: block;
     margin: auto;
   }
+
+  ion-button {
+    --ion-color-primary: #FFA500;
+    --ion-color-primary-contrast: #ffffff;
+  }

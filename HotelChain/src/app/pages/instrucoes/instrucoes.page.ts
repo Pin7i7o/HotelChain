@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-instrucoes',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class InstrucoesPage {
   showCardContent: string | null = null;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   toggleCardContent(cardId: string) {
     this.showCardContent = this.showCardContent === cardId ? null : cardId;
@@ -20,6 +21,10 @@ export class InstrucoesPage {
 
   enviarDados() {
     // Lógica de envio dos dados
+  }
+
+  voltarParaHome() {
+    this.router.navigate(['/home']);
   }
 }
 

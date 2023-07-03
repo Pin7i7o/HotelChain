@@ -1,4 +1,31 @@
-  .enviar-button {
-    --background: rgb(255, 102, 0);
+  ion-button {
+    --background: #F8A435;
     --color: white;
   }
+
+  ion-card.card-inst {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #F8A435;
+    background-color: white;
+    text-align: center;
+    padding: 0;
+  }
+
+  .card-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .card-spacing {
+    margin-bottom: 30px; /* Ajuste o valor conforme necessário para criar o espaçamento desejado */
+  }
+  
+  .footer-toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  

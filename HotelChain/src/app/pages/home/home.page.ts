@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { LoginService } from '../../services/login-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { LoginService } from '../../services/login-service.service';
 export class HomePage implements OnInit {
   username: string = '';
 
-  constructor(public navCtrl: NavController, private loginService: LoginService) { }
+  constructor(public navCtrl: NavController, private loginService: LoginService, private router: Router) { }
 
   async ngOnInit() {
     this.username = await this.loginService.getUser();
@@ -31,5 +32,9 @@ export class HomePage implements OnInit {
   goToProfilePage(){
     this.navCtrl.navigateForward('/tabs/perfil');
   }
+
+  redirectToInstructions() {
+    this.router.navigateByUrl('/instrucoes');
+  } 
 
 }
