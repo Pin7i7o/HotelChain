@@ -1,7 +1,7 @@
 ion-card.welcome-card {
     border-radius: 15px;
     border-style: solid;
-    border-color: #F8A435;
+    border-color: var(--ion-color-light-orange);
     background-color: white;
     text-align: center;
 }
@@ -29,11 +29,11 @@ ion-button.tabs-button {
     height: 140px;
   
     --border-radius: 5%;
-    --border-color: #F8A435;
+    --border-color: var(--ion-color-light-orange);
     --border-style: solid;
     --border-width: 1px;
    
-    --ripple-color: rgb(246, 182, 133);
+    --ripple-color: var(--ion-color-light-orange);
   
     --padding-top: 10px;
     --padding-bottom: 10px;
@@ -53,7 +53,6 @@ ion-col.img {
     margin: auto;
   }
 
-  ion-button {
-    --ion-color-primary: #FFA500;
-    --ion-color-primary-contrast: #ffffff;
+  ion-button.help{
+    color: var(--ion-color-light-orange);
   }

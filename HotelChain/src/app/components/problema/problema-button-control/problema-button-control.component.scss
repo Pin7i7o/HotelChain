@@ -14,7 +14,7 @@ ion-button.round-button {
     --border-style: solid;
     --border-width: 1px;
    
-    --ripple-color: rgb(246, 182, 133);
+    --ripple-color: var(--ion-color-light-orange);
 }
 
 .overlay {

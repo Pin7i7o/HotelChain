@@ -1,12 +1,12 @@
   ion-button {
-    --background: #F8A435;
+    --background: var(--ion-color-light-orange);
     --color: white;
   }
 
   ion-card.card-inst {
     border-radius: 15px;
     border-style: solid;
-    border-color: #F8A435;
+    border-color: var(--ion-color-light-orange);
     background-color: white;
     text-align: center;
     padding: 0;
@@ -19,7 +19,7 @@
   }
 
   .card-spacing {
-    margin-bottom: 30px; /* Ajuste o valor conforme necessário para criar o espaçamento desejado */
+    margin-bottom: 30px;
   }
   
   .footer-toolbar {

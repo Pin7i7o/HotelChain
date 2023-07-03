@@ -1,5 +1,5 @@
 ion-button.orangeBt{
-    --background: #D7682A;
+    --background: var(--ion-color-dark-orange);
     --background-hover: #dbdbdb;
     --background-activated: #bebebe;
     --background-focused: #bebebe;
@@ -10,7 +10,7 @@ ion-button.orangeBt{
     --border-style: solid;
     --border-width: 1px;
    
-    --ripple-color: rgb(246, 182, 133);
+    --ripple-color: var(--ion-color-light-orange);
 
     width: 165px;
   }
