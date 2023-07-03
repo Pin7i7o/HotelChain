@@ -32,7 +32,7 @@ export class MapsPage {
         break;
       
       case 2:
-        this.floor = '/assets/mapa/3andar.jpg';
+        this.floor = '/assets/mapa/3andar.jpeg';
         this.caption = `17- Sala de arrumações<br>
         18- Quartos comuns<br>
         19- Quarto economico<br>
