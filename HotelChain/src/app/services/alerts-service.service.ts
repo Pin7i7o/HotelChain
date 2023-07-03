@@ -10,6 +10,7 @@ export interface Alerta {
   tipo: string;
   infraestrutura: number;
   equipamento: number;
+  controlo: string;
   concluido: boolean;
 }
 
@@ -50,6 +51,7 @@ export class AlertsServiceService {
         tipo: 'Sensor', 
         infraestrutura: 258,
         equipamento: 1298,
+        controlo: 'Temp',
         concluido: false 
       },
       { 
@@ -61,6 +63,7 @@ export class AlertsServiceService {
         tipo: 'Manutencao', 
         infraestrutura: 322,
         equipamento: 945,
+        controlo: 'Vol',
         concluido: false 
       },
       { 
@@ -72,6 +75,7 @@ export class AlertsServiceService {
         tipo: 'Manutencao', 
         infraestrutura: 101,
         equipamento: 2150,
+        controlo: 'Temp',
         concluido: false 
       },
       { 
@@ -80,9 +84,10 @@ export class AlertsServiceService {
         data: new Date(), 
         descricao: 'Novo Sensor Adicionado', 
         prioridade: 'Alta', 
+        tipo: 'Sensor', 
         infraestrutura: 120,
         equipamento: 654,
-        tipo: 'Sensor', 
+        controlo: 'Vol',
         concluido: false 
       }
     ]

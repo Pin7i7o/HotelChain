@@ -1,0 +1,44 @@
+<ion-row style="height: 80px;"></ion-row>
+<ion-row>
+  <ion-col size="3"></ion-col>
+  <ion-col size="4">
+    <ion-button class="round-button" (click)="onButtonClick()">
+      <ion-icon slot="icon-only" name="power"></ion-icon>
+    </ion-button>
+  </ion-col>
+  <ion-col size="4">
+    <ion-button class="round-button">
+      <ion-icon slot="icon-only" name="{{ diff }}"></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="2"></ion-col>
+  <ion-col size="4" class="ion-text-center">
+    Ligar/Desligar
+  </ion-col>
+  <ion-col size="4" class="ion-text-center">
+    {{ diff_text }}
+  </ion-col>
+  <ion-col size="2"></ion-col>
+</ion-row>
+
+
+<ng-container *ngIf="showOverlay">
+  <ng-container *ngIf="equipOn">
+    <div class="overlay">
+      <div class="overlay-content-off">
+        Equipamento Desligado
+      </div>
+    </div>
+  </ng-container>
+  
+  <ng-container *ngIf="!equipOn">
+    <div class="overlay">
+      <div class="overlay-content-on">
+        Equipamento Ligado
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

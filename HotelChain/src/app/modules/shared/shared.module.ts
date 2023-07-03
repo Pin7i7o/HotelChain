@@ -6,6 +6,8 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { AlertCardComponent } from '../../components/alert-card/alert-card.component';
 import { ProblemaCardComponent } from 'src/app/components/problema/problema-card/problema-card.component';
 import { ProblemSignCardComponent } from 'src/app/components/problema/problem-sign-card/problem-sign-card.component';
+import { ProblemaEquipInfoComponent } from 'src/app/components/problema/problema-equip-info/problema-equip-info.component';
+import { ProblemaButtonControlComponent } from 'src/app/components/problema/problema-button-control/problema-button-control.component';
 import { ProblemaButtonAddSensorComponent } from 'src/app/components/problema/problema-button-add-sensor/problema-button-add-sensor.component';
 
 @NgModule({
@@ -14,6 +16,8 @@ import { ProblemaButtonAddSensorComponent } from 'src/app/components/problema/pr
     AlertCardComponent,
     ProblemaCardComponent,
     ProblemSignCardComponent,
+    ProblemaEquipInfoComponent,
+    ProblemaButtonControlComponent,
     ProblemaButtonAddSensorComponent
   ],
   imports: [
@@ -25,6 +29,8 @@ import { ProblemaButtonAddSensorComponent } from 'src/app/components/problema/pr
     AlertCardComponent,
     ProblemaCardComponent,
     ProblemSignCardComponent,
+    ProblemaEquipInfoComponent,
+    ProblemaButtonControlComponent,
     ProblemaButtonAddSensorComponent
   ]
 })

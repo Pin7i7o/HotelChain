@@ -11,5 +11,25 @@
 <ion-content [fullscreen]="true">
   <ion-row style="height: 25px;"></ion-row>
   <app-problem-sign-card></app-problem-sign-card>
-  <ion-row style="height: 50px;"></ion-row>
+  <ion-row style="height: 80px;"></ion-row>
+    <app-problema-equip-info
+      *ngIf="alerta"
+      [equipamento]= "alerta.equipamento"
+      [descricao]="alerta.descricao"
+    ></app-problema-equip-info>
+
+    <ng-container *ngIf="alerta && alerta.controlo === 'Vol'; else tempCard">
+      <app-problema-button-control diff="volume-high" diff_text="Volume"></app-problema-button-control>
+    </ng-container>
+
+    <ng-template #tempCard>
+      <ng-container *ngIf="alerta && alerta.controlo === 'Temp'; else noneCard">
+        <app-problema-button-control diff="thermometer-outline" diff_text="Temperatura"></app-problema-button-control>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #noneCard>
+      
+    </ng-template>
+
 </ion-content>
