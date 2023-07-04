@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true" class="background-fade">
+  <div class="image-container">
+    <ion-img 
+      style="height: 300px; width: 300px;"  
+      src="/assets/logo.png"
+    ></ion-img>
+  </div>
+
+  <div class="container">
+      <div class="rounded-icon-container">
+        <ion-icon name="mail-outline" class="rounded-icon"></ion-icon>
+        <ion-item lines="none" class="rounded-item" color="white">
+          <ion-input placeholder="Email" type="text"></ion-input>
+        </ion-item>
+      </div>
+
+        <div class="rounded-icon-container">
+          <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
+          <ion-item lines="none" class="rounded-item" color="white">
+            <ion-input placeholder="Username" type="text"></ion-input>
+          </ion-item>
+        </div>
+    
+        <div class="rounded-icon-container">
+          <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
+            <ion-item lines="none" class="rounded-item" color="white">
+              <ion-input placeholder="Password" type="password"></ion-input>
+            </ion-item>
+        </div>
+    
+        <ion-button expand="full" shape="round" class="login-button">
+          Criar Conta
+        </ion-button>
+
+      <div class="create-account-text">
+        <p> Já tem uma conta? <a href="login">Login</a></p>
+      </div>
+  </div>
+</ion-content>
+
+
