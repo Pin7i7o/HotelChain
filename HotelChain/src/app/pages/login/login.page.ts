@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../../services/login-service.service';
 import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,13 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
   loginForm!: FormGroup;
+  errorMessage!: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
+    private toastController: ToastController
   ) {}
 
   ngOnInit() {
@@ -32,14 +35,23 @@ export class LoginPage implements OnInit {
       if (loggedIn) {
         localStorage.setItem('username', username);
         this.router.navigateByUrl('/home');
-        console.log('Login realizado com sucesso!');
       } else {
-        // Login falhou, exibir mensagem de erro ou realizar ação adequada
-        console.log('Credenciais inválidas. Tente novamente.');
+        this.errorMessage = 'Username ou Password inválidos.';
+        const toast = await this.toastController.create({
+          message: this.errorMessage,
+          duration: 2000,
+          position: 'bottom'
+        });
+        toast.present();
       }
     } else {
-      // Formulário inválido, exibir mensagem de erro ou realizar ação adequada
-      console.log('Preencha todos os campos obrigatórios.');
+      this.errorMessage = 'Preencha todos os campos para prosseguir.';
+        const toast = await this.toastController.create({
+          message: this.errorMessage,
+          duration: 2000,
+          position: 'bottom'
+        });
+        toast.present();
     }
   }
 }
