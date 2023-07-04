@@ -31,7 +31,6 @@ export class LoginService {
   }
 
   async logout() {
-    // Remover as informações do usuário do LocalStorage
     await this._storage?.remove('username');
   }
 }

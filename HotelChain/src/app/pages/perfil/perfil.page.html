@@ -117,5 +117,18 @@
     </ion-col>
     <ion-col size="1"></ion-col>
   </ion-row>
+
+  <ion-row class="ion-justify-content-end">
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <ion-card class="card-button" style="height: 65px; display: flex; align-items: center; justify-content: space-between;">
+        <ion-label fill="clear" style="display: flex; align-items: center; text-align: center; width: 100%; justify-content: center;">Sair da conta</ion-label>
+        <ion-button fill="clear" style="display: flex; align-items: center;" (click)="logout()">
+          <ion-icon name="arrow-forward" color="dark-orange" class="orange-icon" style="margin-left: 5px;"></ion-icon>
+        </ion-button>
+      </ion-card>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
 </ion-content>
 
