@@ -17,16 +17,12 @@ ion-button.round-button {
     --ripple-color: var(--ion-color-light-orange);
 }
 
-ion-card.floors-background {
+ion-card.border {
     border-radius: 5px;
     border-style: solid;
     border-color: var(--ion-color-light-orange);
-    background-color: white;
     text-align: center;
     box-shadow: none;
-}
-
-ion-card.max-width {
     width: 300px;
 }
 

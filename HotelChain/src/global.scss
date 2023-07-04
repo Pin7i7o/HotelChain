@@ -24,3 +24,12 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ion-content.background-fade {
+   --ion-background-color: linear-gradient(to bottom, #ffffff, #efc5a7);
+  }
+
+  ion-content ion-card {
+  background: white;
+}
+  
