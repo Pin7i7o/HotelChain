@@ -63,7 +63,7 @@ export class AlertsServiceService {
         tipo: 'Manutencao', 
         infraestrutura: 322,
         equipamento: 945,
-        controlo: 'Vol',
+        controlo: 'Temp',
         concluido: false 
       },
       { 
@@ -75,7 +75,7 @@ export class AlertsServiceService {
         tipo: 'Manutencao', 
         infraestrutura: 101,
         equipamento: 2150,
-        controlo: 'Temp',
+        controlo: 'Vol',
         concluido: false 
       },
       { 
