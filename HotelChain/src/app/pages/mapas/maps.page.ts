@@ -55,7 +55,7 @@ export class MapsPage {
         8- Quarto 5 estrelas`;
           break;
       default:
-        this.floor = '/assets/icons/interrogacao.png';
+        this.floor = '/assets/icons/interrogação.png';
         this.caption = 'Piso inexistente';
         break;
     }
