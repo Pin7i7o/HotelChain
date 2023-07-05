@@ -1,39 +1,39 @@
 <ion-content [fullscreen]="true" class="background-fade">
 
-  <div class="image-container">
-    <ion-img 
-      style="height: 300px; width: 300px;"  
-      src="/assets/logo.png"
-    ></ion-img>
-  </div>
+  <ion-content [fullscreen]="true" class="background-fade">
+    <!-- Container de imagem -->
+    <div class="image-container">
+      <ion-img style="height: 300px; width: 300px;" src="/assets/logo.png"></ion-img>
+    </div>
   
-
-  <div class="container">
-    <form [formGroup]="loginForm">
-      <div class="rounded-icon-container">
-        <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
-        <ion-item lines="none" class="rounded-item" color="white">
-          <ion-input placeholder="Username" formControlName="username" type="text"></ion-input>
-        </ion-item>
-      </div>
+    <div class="container">
+      <form [formGroup]="loginForm">
+        <!-- Container de ícone arredondado para o campo de usuário -->
+        <div class="rounded-icon-container">
+          <ion-icon name="person-circle-outline" class="rounded-icon"></ion-icon>
+          <ion-item lines="none" class="rounded-item" color="white">
+            <ion-input placeholder="Username" formControlName="username" type="text"></ion-input>
+          </ion-item>
+        </div>
   
-      <div class="rounded-icon-container">
-        <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
+        <!-- Container de ícone arredondado para o campo de senha -->
+        <div class="rounded-icon-container">
+          <ion-icon name="lock-closed-outline" class="rounded-icon"></ion-icon>
           <ion-item lines="none" class="rounded-item" color="white">
             <ion-input placeholder="Password" formControlName="password" type="password"></ion-input>
           </ion-item>
-      </div>
+        </div>
   
-      <ion-button expand="full" shape="round" class="login-button" (click)="login()">
-        Login
-      </ion-button>
-
-      <div class="create-account-text">
-        <p> Ainda não tem uma conta? <a href="criar-conta">Criar Conta</a></p>
-        <p> Esqueceu-se da password? <a href="#">Recuperar</a></p>
-      </div>
-    </form>
-  </div>
+        <!-- Botão de login -->
+        <ion-button expand="full" shape="round" class="login-button" (click)="login()">Login</ion-button>
   
-</ion-content>
-
+        <!-- Texto para criar conta e recuperar senha -->
+        <div class="create-account-text">
+          <p>Ainda não tem uma conta? <a href="criar-conta">Criar Conta</a></p>
+          <p>Esqueceu-se da password? <a href="#">Recuperar</a></p>
+        </div>
+      </form>
+    </div>
+  
+  </ion-content>
+  

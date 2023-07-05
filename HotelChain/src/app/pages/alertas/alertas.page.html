@@ -9,6 +9,7 @@
   <ion-row style="height: 30px;"></ion-row> <!-- Empty row for spacing -->
 
   <ion-item>
+    <!-- Select input for priority -->
     <ion-select 
       [(ngModel)]="selectedPriority"
       (ionChange)="sortAlertas()"
@@ -19,14 +20,19 @@
       style="font-size: larger;"
       cancel-text="Cancelar"
     >
+      <!-- Options for priority -->
       <ion-select-option value="Alta">Alta</ion-select-option>
       <ion-select-option value="Baixa">Baixa</ion-select-option>
     </ion-select>
   </ion-item>
-
-  <ion-row style="height: 10px;"  class="background" ></ion-row>
+  
+  <!-- Spacer -->
+  <ion-row style="height: 10px;" class="background"></ion-row>
+  
+  <!-- List of alert items -->
   <ion-list>
     <ion-item *ngFor="let alerta of alertas">
+      <!-- Custom alert card component -->
       <app-alert-card
         [descricao]="alerta.descricao"
         [data]="alerta.data"
@@ -36,4 +42,5 @@
       ></app-alert-card>
     </ion-item>
   </ion-list>
-</ion-content>
+  </ion-content>
+  

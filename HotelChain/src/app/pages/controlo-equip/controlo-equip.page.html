@@ -7,38 +7,50 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content [fullscreen]="true" class="background-fade">
+  <!-- Spacer -->
   <ion-row style="height: 25px;"></ion-row>
+
+  <!-- Custom problem sign card component -->
   <app-problem-sign-card></app-problem-sign-card>
+
+  <!-- Spacer -->
   <ion-row style="height: 80px;"></ion-row>
-    <app-problema-equip-info
-      *ngIf="alerta"
-      [equipamento]= "alerta.equipamento"
-      [descricao]="alerta.descricao"
-    ></app-problema-equip-info>
 
-    <ng-container *ngIf="alerta && alerta.controlo === 'Vol'; else tempCard">
-      <app-problema-button-control diff="volume-high" diff_text="Volume"></app-problema-button-control>
+  <!-- Custom problem equipment information component -->
+  <app-problema-equip-info
+    *ngIf="alerta"
+    [equipamento]="alerta.equipamento"
+    [descricao]="alerta.descricao"
+  ></app-problema-equip-info>
+
+  <!-- Display volume button control if 'controlo' is 'Vol' -->
+  <ng-container *ngIf="alerta && alerta.controlo === 'Vol'; else tempCard">
+    <app-problema-button-control diff="volume-high" diff_text="Volume"></app-problema-button-control>
+  </ng-container>
+
+  <ng-template #tempCard>
+    <!-- Display temperature button control if 'controlo' is 'Temp' -->
+    <ng-container *ngIf="alerta && alerta.controlo === 'Temp'; else noneCard">
+      <app-problema-button-control diff="thermometer-outline" diff_text="Temperatura"></app-problema-button-control>
     </ng-container>
+  </ng-template>
 
-    <ng-template #tempCard>
-      <ng-container *ngIf="alerta && alerta.controlo === 'Temp'; else noneCard">
-        <app-problema-button-control diff="thermometer-outline" diff_text="Temperatura"></app-problema-button-control>
-      </ng-container>
-    </ng-template>
+  <ng-template #noneCard>
+    <!-- Spacer -->
+    <ion-row style="height: 80px;"></ion-row>
 
-    <ng-template #noneCard>
-      <ion-row style="height: 80px;"></ion-row>
-        <ion-row>
-          <ion-col size="3"></ion-col>
-          <ion-col size="6">
-            <ion-button class="orangeBt">
-              Funcionários
-            </ion-button>
-          </ion-col>
-          <ion-col size="3"></ion-col>
-        </ion-row>
-    </ng-template>
+    <!-- Display button for employees -->
+    <ion-row>
+      <ion-col size="3"></ion-col>
+      <ion-col size="6">
+        <ion-button class="orangeBt">
+          Funcionários
+        </ion-button>
+      </ion-col>
+      <ion-col size="3"></ion-col>
+    </ion-row>
+  </ng-template>
 
 </ion-content>
+
